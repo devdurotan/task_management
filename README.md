@@ -9,7 +9,7 @@ Clone the project
 git clone <repo-url>
 
 Create virtual environment
-python -m venv env_task
+python3 -m venv env_task
 source env_task/bin/activate (Linux / Mac)
 env_task\Scripts\activate (Windows)
 
@@ -19,7 +19,14 @@ Install dependencies
 pip install -r requirements.txt
 
 Run migrations
-python manage.py migrate (No Need as i have attched sqlite file containing data)
+python3 manage.py migrate (No Need as i have attched sqlite file containing data)
+
+Start server
+python3 manage.py runserver
+
+URL with swagger : http://127.0.0.1:8000/swagger
+
+Authentication
 
 Credentials : 
 Admin : 
@@ -33,16 +40,10 @@ email : user3@gmail.com
 
 password : Password@123
 
-Start server
-python manage.py runserver
-
-Authentication
-
 Login to get JWT token and send it in header:
 
 Authorization: Bearer <token>
 
-URL with swagger : http://127.0.0.1:8000/swagger
 Main APIs
 
 User APIs
